@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 707613646}
   - component: {fileID: 707613645}
   - component: {fileID: 707613644}
+  - component: {fileID: 707613647}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -230,6 +231,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707613642}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &707613647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707613642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e34affb8f779984b9a31af8da73962d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  force: 200
+  muzzle: {fileID: 0}
 --- !u!1 &912602577
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +379,7 @@ GameObject:
   - component: {fileID: 1091536301}
   - component: {fileID: 1091536300}
   - component: {fileID: 1091536299}
+  - component: {fileID: 1091536302}
   m_Layer: 0
   m_Name: gun2
   m_TagString: Untagged
@@ -462,6 +479,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091536297}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1091536302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091536297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e34affb8f779984b9a31af8da73962d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  force: 200
+  muzzle: {fileID: 0}
 --- !u!1 &1657585245
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +705,8 @@ GameObject:
   - component: {fileID: 9016738153092506168}
   - component: {fileID: 6540656961398675186}
   - component: {fileID: 9016738153092506169}
+  - component: {fileID: 9016738153092506171}
+  - component: {fileID: 9016738153092506170}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -689,8 +723,8 @@ Transform:
   m_GameObject: {fileID: 4739449999911630631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23085637, y: 0.23085637, z: 0.23085637}
+  m_LocalPosition: {x: 0, y: -0.39308, z: 1.1208}
+  m_LocalScale: {x: 0.27656594, y: 0.27656594, z: 0.27656594}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 707613643}
@@ -778,6 +812,44 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9016738153092506170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739449999911630631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d3aaa7ee9b274aa9f0effed96e0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  mouseSen: 1
+  rotX: 0
+--- !u!136 &9016738153092506171
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739449999911630631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 12.960007
+  m_Height: 6.5133305
+  m_Direction: 1
+  m_Center: {x: 0.029901031, y: 2.2680385, z: 0.5210362}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
