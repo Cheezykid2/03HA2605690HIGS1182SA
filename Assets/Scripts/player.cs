@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using UnityEngine;
 
+[DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
 public class player : MonoBehaviour
 {
 
@@ -54,5 +56,10 @@ public class player : MonoBehaviour
             thruster.Intensity(intensity);
         }
 
+    }
+
+    private string GetDebuggerDisplay()
+    {
+        return ToString();
     }
 }
