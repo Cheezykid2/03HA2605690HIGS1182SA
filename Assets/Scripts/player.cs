@@ -5,7 +5,7 @@ public class player : MonoBehaviour
 
     [SerializeField] private float _movementSpeed = 50f;
     [SerializeField] private float _turnSpeed = 60f;
-    [SerializeField] private Thruster[] _Thruster;
+    [SerializeField] private Truster[] _Thruster;
     [SerializeField] private Laser[] _lasers;
 
     private void Update()
